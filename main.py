@@ -1,5 +1,4 @@
-import cv2
-import mediapipe as mp
+import sys
 from tkinter import *
 from Renderer import Renderer
 
@@ -12,6 +11,10 @@ DLENGTH = 150
 
 
 def main():
+    if not len(sys.argv) == 2:
+        print("Wrong arguments. Provide the path to the video.")
+        exit()
+
     master = Tk()
     master.title = 'Planar Robot Manipulator'
     canvasBot = Canvas(master,width = DWIDTH, height = DHEIGHT, background='white')
@@ -24,7 +27,7 @@ def main():
     canvasBot.create_line(DWIDTH//2,0,DWIDTH//2,DHEIGHT, fill='black',width=1)
     canvasBot.create_line(0,DHEIGHT//2,DWIDTH,DHEIGHT//2, fill='black',width=1)   
     
-    render = Renderer(DLENGTH, canvasBot, canvasImg, 'out.mp4')
+    render = Renderer(DLENGTH, canvasBot, canvasImg, sys.argv[1])
 
     # Create a button to trigger the run
     button = Button(master, text="Start", command=render.run)
