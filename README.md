@@ -53,6 +53,6 @@ Determine the position of the end effector based on the lengths of the segments 
     - x = l<sub>1</sub> · cos(θ<sub>1</sub>) + l<sub>2</sub> · cos(θ<sub>1</sub> + θ<sub>2</sub>)
     - y = l<sub>1</sub> · sin(θ<sub>1</sub>) + l<sub>2</sub> · sin(θ<sub>1</sub> + θ<sub>2</sub>)
 
-### Methodology
+#### Methodology
 
 First, the **left shoulder**, **left elbow** and **left wrist** points were converted into vectors. Then, the angles between these vectors were calculated using the dot product, and the direction was determined using the cross product.
