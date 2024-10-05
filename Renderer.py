@@ -1,5 +1,3 @@
-import numpy as np
-import math
 import cv2
 import mediapipe as mp
 from PlanarRobot import PlanarRobot
