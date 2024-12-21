@@ -22,5 +22,6 @@ jobs:
 
       - name: Analysing the code with pylint
         run: |
-          pylint $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '.py$')
+          # pylint $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '.py$')
+          pylint $(find . -name "*.py")
         continue-on-error: true
