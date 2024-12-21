@@ -36,14 +36,14 @@ Make sure the video includes your face. I have masked my face in the demo so tha
 
 Determine the position of the end effector based on the lengths of the segments and the angles of the joints.
 
-#### Definitions:
+#### Definitions
 
 - **l<sub>1</sub>**: Length of the first segment (upper arm)
 - **l<sub>2</sub>**: Length of the second segment (forearm)
 - **θ<sub>1</sub>**: Angle of the first joint
 - **θ<sub>2</sub>**: Angle of the second joint
 
-#### Equations:
+#### Equations
 
 1. Position of the second joint
     - x<sub>1</sub> = l<sub>1</sub> · cos(θ<sub>1</sub>)
